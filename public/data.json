@@ -1,0 +1,44 @@
+[
+    {
+        "_id": 1,
+        "name": "Villain-hydra",
+        "price": "2000",
+        "description": "100% Halal and alkohol free",
+        "img": "https://i.ibb.co/L52d22f/villain-hydra.jpg"
+    },
+    {
+        "_id": 2,
+        "name": "Villain Perpumes",
+        "price": "2500",
+        "description": "Very spicy and simple flabour..7 days smelling service",
+        "img": "https://i.ibb.co/QCLG3M5/Villain.jpg"
+    },
+    {
+        "_id": 3,
+        "name": "lexure-Man",
+        "price": "8000",
+        "description": "10% alkohol free",
+        "img": "https://i.ibb.co/x1XcJ2L/lexure-Man.jpg"
+    },
+    {
+        "_id": 4,
+        "name": "women-perpumes",
+        "price": "5000",
+        "description": "sweet smell and 20% alkohol free ",
+        "img": "https://i.ibb.co/ncwDZHm/women-perpumes.jpg"
+    },
+    {
+        "_id": 5,
+        "name": "al-haramin",
+        "price": "9000",
+        "description": "This is a best selling product and 100% halal product",
+        "img": "https://i.ibb.co/F3WMc3q/al-haramin.jpg"
+    },
+    {
+        "_id": 6,
+        "name": "Vip Perpumes",
+        "price": "14000",
+        "description": "Very expensive perpumes and halal product",
+        "img": "https://i.ibb.co/NrK56Dh/vip-01.webp"
+    }
+]
