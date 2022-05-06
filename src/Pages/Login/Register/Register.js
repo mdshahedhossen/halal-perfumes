@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import './Register.css'
+import SociaLogin from "../SociaLogin/SociaLogin";
 
 const Register = () => {
     const [
@@ -84,6 +85,7 @@ const Register = () => {
       <p className="new-user">
         Already Register? <Link onClick={navigateLogin} className="from-link" to='/Login'>Login</Link>
     </p>
+    <SociaLogin></SociaLogin>
     </div>
   );
 };
