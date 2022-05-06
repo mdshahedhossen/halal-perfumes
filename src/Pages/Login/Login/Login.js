@@ -1,9 +1,11 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
+import './Login.css'
 
 const Login = () => {
   return (
-    <div>
+    <div className="login-container">
+        <h3 className="text-center">Please Login...</h3>
       <Form className="w-50 mx-auto mt-5">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -18,7 +20,7 @@ const Login = () => {
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button className="btn-login" type="submit">
           Login
         </Button>
       </Form>
