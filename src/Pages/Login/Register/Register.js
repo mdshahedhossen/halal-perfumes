@@ -33,6 +33,11 @@ const Register = () => {
     if(user){
         navigate('/login')
     }
+    let errorElement
+    if (error) {
+        errorElement= <p>Already Register!!</p>
+    }
+
 
   return (
     <div className="register-container">
@@ -75,6 +80,7 @@ const Register = () => {
           Registation
         </Button>
       </Form>
+      <p className="text-center text-danger">{errorElement}</p>
       <p className="new-user">
         Already Register? <Link onClick={navigateLogin} className="from-link" to='/Login'>Login</Link>
     </p>

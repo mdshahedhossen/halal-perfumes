@@ -31,6 +31,10 @@ const Login = () => {
     if(user){
         navigate('/home')
     }
+    let errorElement;
+    if(error){
+        errorElement=<p>Sorry!! User no found!!</p>
+    }
   return (
     <div className="login-container">
         <h3 className="text-center">Please Login...</h3>
@@ -52,6 +56,7 @@ const Login = () => {
           Login
         </Button>
       </Form>
+      <p className="text-center text-danger">{errorElement}</p>
       <p className="new-user">New User? <span onClick={navigateRegister} className="register">Please Register...</span></p>
     </div>
   );
