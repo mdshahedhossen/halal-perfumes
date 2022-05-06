@@ -1,10 +1,12 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import './Login.css'
 
 const Login = () => {
     const emailRef=useRef('')
     const passRef=useRef('')
+    const navigate=useNavigate()
 
     const handleOnSubmit=e=>{
         e.preventDefault();
@@ -12,6 +14,10 @@ const Login = () => {
         const password=passRef.current.value;
         console.log(email,password)
     } 
+
+    const navigateRegister=(e)=>{
+        navigate('/register')
+    }
   return (
     <div className="login-container">
         <h3 className="text-center">Please Login...</h3>
@@ -33,6 +39,7 @@ const Login = () => {
           Login
         </Button>
       </Form>
+      <p className="new-user">New User? <span onClick={navigateRegister} className="register">Please Register...</span></p>
     </div>
   );
 };
