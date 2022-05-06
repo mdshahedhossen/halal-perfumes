@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding:0;
+}
 .register-container{
     background-color: rgb(230, 232, 235);
     width: 40%;
@@ -32,7 +36,7 @@
 }
 .from-link{
     text-decoration: none;
-    color:orange
+    color:red
 }
 .from-link:hover{
     color: rgb(43, 223, 43);

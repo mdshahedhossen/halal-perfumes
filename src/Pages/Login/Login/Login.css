@@ -30,13 +30,6 @@
     cursor: pointer;
     color: red;
 }
-/* .from-link{
-    text-decoration: none;
-    color:orange
-}
-.from-link:hover{
-    color: rgb(43, 223, 43);
-} */
 
 @media only screen and (max-width: 576px){
     .login-container{
