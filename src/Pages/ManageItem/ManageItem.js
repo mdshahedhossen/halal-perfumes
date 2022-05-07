@@ -1,10 +1,12 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import useItems from "../hooks/useItems";
+import './MnageItem.css'
 
 const ManageItem = ({ item }) => {
   const { _id, name, price, quantity } = item;
   const [items,setItems]=useItems()
+  console.log(items)
   const handleDelete=(id)=>{
     const proceed=window.confirm('Are You Sure?')
     if(proceed){
@@ -37,7 +39,7 @@ const ManageItem = ({ item }) => {
           <td>{name}</td>
           <td>{price}</td>
           <td>{quantity}</td>
-          <td onClick={()=>handleDelete(_id)}>X</td>
+          <td><button className="delete-btn" onClick={()=>handleDelete(_id)}>Delete Item</button></td>
         </tr>
       </tbody>
     </Table>
