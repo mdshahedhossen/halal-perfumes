@@ -43,6 +43,7 @@ function App() {
         }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>  
+        <Route path='*' element={<Register></Register>}></Route>  
       </Routes>
       <Footer></Footer>
     </div>
