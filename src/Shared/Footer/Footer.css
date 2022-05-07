@@ -1,6 +1,9 @@
 .footer-container{
     background-color: #525252;
     padding: 30px;
+    position: absolute;
+    width: 100%;
+    
 }
 .projet-title{
     text-align: center;

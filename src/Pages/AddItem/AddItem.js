@@ -31,7 +31,7 @@ const AddItem = () => {
                 <input className='mb-2 p-2' placeholder='Quantity' type="number" {...register("quantity")} />
                 <input className='mb-2 p-2' placeholder='Price' type="number" {...register("price")} />
                 <input className='mb-2 p-2' placeholder='Photo URL' type="text" {...register("img")} />
-                <input className='p-2' type="submit" value='Add Item'/>
+                <input className='mb-4 p-2' type="submit" value='Add Item'/>
             </form>
         </div>
     );

@@ -5,7 +5,7 @@ const Footer = () => {
     let year=new Date().getFullYear()
     return (
         <div>
-            <footer className='footer-container'>
+            <footer className='footer-container'sticky="bottom">
                 <div className='projet-title'>
                     <h4>Halal Perpumes</h4>
                     <p>This Project is wareHouse base project</p>

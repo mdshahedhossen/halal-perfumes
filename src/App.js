@@ -10,11 +10,13 @@ import ManageItems from './Pages/ManageItems/ManageItems';
 import AddItem from './Pages/AddItem/AddItem';
 import Blogs from './Pages/Blogs/Blogs';
 import Footer from './Shared/Footer/Footer';
+import Notmatch from './Notmatch/Notmatch';
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
+       
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
@@ -43,9 +45,10 @@ function App() {
         }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>  
-        <Route path='*' element={<Register></Register>}></Route>  
+        <Route path='*' element={<Notmatch></Notmatch>}></Route> 
       </Routes>
       <Footer></Footer>
+      
     </div>
   );
 }
