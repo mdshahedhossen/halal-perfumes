@@ -7,6 +7,7 @@ import Register from './Pages/Login/Register/Register';
 import ItemDetails from './Pages/ItemDetails/ItemDetails';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import ManageItems from './Pages/ManageItems/ManageItems';
+import AddItem from './Pages/AddItem/AddItem';
 
 function App() {
   return (
@@ -18,6 +19,12 @@ function App() {
         <Route path='/item/:itemId' element={
           <RequireAuth>
             <ItemDetails></ItemDetails>
+          </RequireAuth>
+        }></Route>
+
+        <Route path='/addItem' element={
+          <RequireAuth>
+            <AddItem></AddItem>
           </RequireAuth>
         }></Route>
 
