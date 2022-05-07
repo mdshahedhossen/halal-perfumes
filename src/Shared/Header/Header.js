@@ -22,7 +22,14 @@ const Header = () => {
               <Nav.Link href="home#item">Items</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
+              {
+                user &&
+                <>
+                <Nav.Link as={Link} to={'addItem'}>Add Item</Nav.Link>
+              <Nav.Link as={Link} to={'manage'}>Manage Items</Nav.Link>
+                </>
+              }
+
               {
                 user ?
                 <Nav.Link as={Link} to={'/login'} onClick={handleSignOut}>

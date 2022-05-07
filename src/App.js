@@ -6,6 +6,7 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import ItemDetails from './Pages/ItemDetails/ItemDetails';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import ManageItems from './Pages/ManageItems/ManageItems';
 
 function App() {
   return (
@@ -17,6 +18,12 @@ function App() {
         <Route path='/item/:itemId' element={
           <RequireAuth>
             <ItemDetails></ItemDetails>
+          </RequireAuth>
+        }></Route>
+
+        <Route path='/manage' element={
+          <RequireAuth>
+            <ManageItems></ManageItems>
           </RequireAuth>
         }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
