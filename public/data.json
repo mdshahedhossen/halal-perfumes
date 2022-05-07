@@ -4,6 +4,8 @@
         "name": "Villain-hydra",
         "price": "2000",
         "description": "100% Halal and alkohol free",
+        "quantity": 10,
+        "supplier" : "Villain BD Branch",
         "img": "https://i.ibb.co/L52d22f/villain-hydra.jpg"
     },
     {
@@ -11,6 +13,8 @@
         "name": "Villain Perpumes",
         "price": "2500",
         "description": "Very spicy and simple flabour..7 days smelling service",
+        "quantity": 13,
+        "supplier" : "Villain BD Branch",
         "img": "https://i.ibb.co/QCLG3M5/Villain.jpg"
     },
     {
@@ -18,6 +22,8 @@
         "name": "lexure-Man",
         "price": "8000",
         "description": "10% alkohol free",
+        "quantity": 20,
+        "supplier" : "lexure-Man Agent",
         "img": "https://i.ibb.co/x1XcJ2L/lexure-Man.jpg"
     },
     {
@@ -25,6 +31,8 @@
         "name": "women-perpumes",
         "price": "5000",
         "description": "sweet smell and 20% alkohol free ",
+        "quantity": 9,
+        "supplier" : "women-perpumes bd Agent",
         "img": "https://i.ibb.co/ncwDZHm/women-perpumes.jpg"
     },
     {
@@ -32,6 +40,8 @@
         "name": "al-haramin",
         "price": "9000",
         "description": "This is a best selling product and 100% halal product",
+        "quantity": 29,
+        "supplier" : "Al-Haramin BD Branch",
         "img": "https://i.ibb.co/F3WMc3q/al-haramin.jpg"
     },
     {
@@ -39,6 +49,8 @@
         "name": "Vip Perpumes",
         "price": "14000",
         "description": "Very expensive perpumes and halal product",
+        "quantity": 8,
+        "supplier" : "Vip Perpumes BD Supplier",
         "img": "https://i.ibb.co/NrK56Dh/vip-01.webp"
     }
 ]
