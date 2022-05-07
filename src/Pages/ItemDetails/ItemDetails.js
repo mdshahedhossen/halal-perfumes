@@ -16,7 +16,7 @@ const ItemDetails = () => {
   }, []);
   return (
     <div >
-        <Card className="mx-auto mt-3" style={{ width: "18rem" }}>
+        <Card className="mx-auto mt-3 mb-4" style={{ width: "18rem" }}>
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
@@ -28,9 +28,14 @@ const ItemDetails = () => {
         <p><small>Supplier= {supplier}</small></p>
         </Card.Text>
         <button className="btn btn-primary">Delivered</button>
-        
+        <h4 className="text-danger">Restock Item...</h4>
+        <input  type="text" name="text" id="" />
+        <button className="btn btn-outline-success">Submit</button>
+
       </Card.Body>
+      
     </Card>
+    
     
     </div>
   );
