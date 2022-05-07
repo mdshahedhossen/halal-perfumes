@@ -8,6 +8,8 @@ import ItemDetails from './Pages/ItemDetails/ItemDetails';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import ManageItems from './Pages/ManageItems/ManageItems';
 import AddItem from './Pages/AddItem/AddItem';
+import Blogs from './Pages/Blogs/Blogs';
+import Footer from './Shared/Footer/Footer';
 
 function App() {
   return (
@@ -19,6 +21,12 @@ function App() {
         <Route path='/item/:itemId' element={
           <RequireAuth>
             <ItemDetails></ItemDetails>
+          </RequireAuth>
+        }></Route>
+
+        <Route path='/blogs' element={
+          <RequireAuth>
+            <Blogs></Blogs>
           </RequireAuth>
         }></Route>
 
@@ -36,6 +44,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>  
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
