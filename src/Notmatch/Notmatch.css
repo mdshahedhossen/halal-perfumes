@@ -6,9 +6,10 @@
 .error-container{
     width: 100%;
     position: relative;
-    top: 50%;
+    margin-top: 50px;
     text-align: center;
     color: #343434;
+    height: 90vh;
 }
 .error-container h1{
     font-size: 160px;

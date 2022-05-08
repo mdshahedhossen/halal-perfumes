@@ -1,7 +1,9 @@
+import { sendPasswordResetEmail } from "firebase/auth";
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../../../firebase.init";
 import SociaLogin from "../SociaLogin/SociaLogin";
 import './Login.css'
@@ -36,6 +38,19 @@ const Login = () => {
     if(error){
         errorElement=<p>Sorry!! User no found!!</p>
     }
+
+    const resetPassword = async () => {
+      const email = emailRef.current.value;
+      if (email) {
+          await sendPasswordResetEmail(email);
+          toast('Sent email');
+      }
+      else{
+          toast('please enter your email address');
+      }
+  }
+
+
   return (
     <div className="login-container">
         <h3 className="text-center">Please Login...</h3>
@@ -57,7 +72,11 @@ const Login = () => {
           Login
         </Button>
       </Form>
+      <p className="new-user">
+        Forget Password? <button onClick={resetPassword} className="text-primary p-auto">Reset password</button>
+    </p>
       <SociaLogin></SociaLogin>
+      <ToastContainer />
       <p className="text-center text-danger">{errorElement}</p>
       <p className="new-user">New User? <span onClick={navigateRegister} className="register">Please Register...</span></p>
     </div>

@@ -12,7 +12,31 @@ const ItemDetails = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setItemDetails(data));
-  }, []);
+  }, [itemDetails]);
+
+  const handleUpdateStock=e=>{
+    e.preventDefault()
+        const quantity = parseInt(e.target.quantity.value) + parseInt(itemDetails.quantity)
+        const updatePerfumes = { quantity }
+
+        const url=`http://localhost:5000/items/${itemId}`
+        fetch(url, {
+          method: 'PUT',
+          headers: {
+              'content-type': 'application/json'
+          },
+          body: JSON.stringify(updatePerfumes)
+
+      })
+          .then(res => res.json())
+          .then(result => {
+              console.log("success", result);
+              alert('Quantity Update Successful');
+              e.target.reset();
+          })
+  }
+
+  
   return (
     <div >
         <Card className="mx-auto mt-3 mb-4" style={{ width: "18rem" }}>
@@ -26,15 +50,22 @@ const ItemDetails = () => {
         <p><small>{description}</small></p>
         <p><small>Supplier= {supplier}</small></p>
         </Card.Text>
-        <button className="btn btn-primary">Delivered</button>
-        <h4 className="text-danger">Restock Item...</h4>
-        <input  type="text" name="text" id="" />
-        <button className="btn btn-outline-success">Submit</button>
-
-      </Card.Body>
-      
+        {/* {
+                            Items.quantity === 0 ?
+                                <button className='btn-danger border-0 text-white p-2'>sold out</button>
+                                :
+                                <button onClick={() => handleDeliver(inventoryId)} className='border-0 p-2 btn-dark'>Delivered</button>
+                        } */}
+      </Card.Body>   
     </Card>
-    
+
+    <div className="restock-form">
+    <h4 className="text-danger text-center">Restock Item...</h4>
+      <form onSubmit={handleUpdateStock}>
+        <input type="number" name="quantity" placeholder="Restock Item Quantity" id="" />
+        <input type="submit" value="Add Quantity" />
+      </form>
+    </div>
     
     </div>
   );
