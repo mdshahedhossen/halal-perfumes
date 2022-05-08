@@ -35,6 +35,21 @@ const ItemDetails = () => {
               e.target.reset();
           })
   }
+  const handleDeliver = id => {
+    const quantityUpdate = itemDetails?.quantity
+    const updateQuantity = { quantityUpdate }
+    fetch(`http://localhost:5000/items/deliver/${id}`, {
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(updateQuantity)
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log('success', data)
+        })
+}
 
   
   return (
@@ -50,12 +65,12 @@ const ItemDetails = () => {
         <p><small>{description}</small></p>
         <p><small>Supplier= {supplier}</small></p>
         </Card.Text>
-        {/* {
-                            Items.quantity === 0 ?
-                                <button className='btn-danger border-0 text-white p-2'>sold out</button>
-                                :
-                                <button onClick={() => handleDeliver(inventoryId)} className='border-0 p-2 btn-dark'>Delivered</button>
-                        } */}
+        {
+          itemDetails.quantity === 0 ?
+         <button className='btn-danger border-0 text-white p-2'>sold out</button>
+              :
+           <button onClick={() => handleDeliver(itemId)} className='border-0 p-2 btn-dark'>Delivered</button>
+         }
       </Card.Body>   
     </Card>
 
