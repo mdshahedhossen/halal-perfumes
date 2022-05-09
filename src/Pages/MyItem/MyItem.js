@@ -1,30 +1,21 @@
-// import React from 'react';
-// import { Card, CardGroup } from 'react-bootstrap';
-// import './MyItem.css'
+import React from 'react';
 
-// const MyItem = ({myItem,handleItemDelete}) => {
-//     console.log(myItem)
-//     const { _id, name,email,description,supplier,img,price,quantity } = myItem;
-//     return (
-//         <div>
-//             <CardGroup className='shadow p-1 mb-5 bg-body rounded'>
-//                 <Card>
-//                     <div>
-//                         <Card.Img variant="white img-fluid" src={img} />
-//                     </div>
-//                     <Card.Body>
-//                         <Card.Title>Name: {name}</Card.Title>
-//                         <h6>UserEmail: {email}</h6>
-//                         <h6>Price: ${price}</h6>
-//                         <p>{description}</p>
-//                         <p><span className='fw-bold'>Quantity/In-Stock:</span> <span className='text-danger fw-bold'> {quantity} KG</span></p>
-//                         <p><span className='fw-bold'>Supplier:</span> {supplier}</p>
-//                     </Card.Body>
-//                     {/* <button onClick={() => handleItemDelete(_id)} className='border-0 btn-dark p-2'>Delete</button> */}
-//                 </Card>
-//             </CardGroup>
-//         </div >
-//     );
-// };
+const MyItem = ({myItem}) => {
+    const{_id,img,name,price,quantity,description,supplier}=myItem
+    return (
+        <div className='item'>
+            <img src={img} alt="" />
+            <div className='item_descrive'>
+            <h2 className='name-title'>{name}</h2>
+            <p className='price'>{price}৳/-</p>
+            <p>Quantity= <span className='text-danger'>{quantity}</span></p>
+            <p><small>{description}</small></p>
+            <p><small>Supplier= {supplier}</small></p>
+            {/* <button className='btn btn-outline-success' onClick={()=>navigateToUpdate(_id)}>Update {name}</button> */}
+            </div>
 
-// export default MyItem;
+        </div>
+    );
+};
+
+export default MyItem;
