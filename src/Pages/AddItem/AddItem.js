@@ -90,7 +90,7 @@ const AddItem = () => {
                     </div> 
 
                     <div className='d-flex justify-content-center'>
-                        <input className='login-btn' type="submit" value="Add Item" />
+                        <input className='login-btn px-4 py-3' type="submit" value="Add Item" />
                     </div>
                 </form>
             </div>
