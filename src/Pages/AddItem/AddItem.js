@@ -6,7 +6,7 @@ import './AddItem.css'
 
 const AddItem = () => {
     const [user]=useAuthState(auth)
-    console.log(user)
+    // console.log(user)
     const { register, handleSubmit } = useForm();
     const onSubmit = data =>{
         console.log(data);

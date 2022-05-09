@@ -3,6 +3,7 @@ import { Card, CardGroup } from 'react-bootstrap';
 import './MyItem.css'
 
 const MyItem = ({myItem,handleItemDelete}) => {
+    console.log(myItem)
     const { _id, name,email,description,supplier,img,price,quantity } = myItem;
     return (
         <div>
@@ -19,7 +20,7 @@ const MyItem = ({myItem,handleItemDelete}) => {
                         <p><span className='fw-bold'>Quantity/In-Stock:</span> <span className='text-danger fw-bold'> {quantity} KG</span></p>
                         <p><span className='fw-bold'>Supplier:</span> {supplier}</p>
                     </Card.Body>
-                    <button onClick={() => handleItemDelete(_id)} className='border-0 btn-dark p-2'>Delete</button>
+                    {/* <button onClick={() => handleItemDelete(_id)} className='border-0 btn-dark p-2'>Delete</button> */}
                 </Card>
             </CardGroup>
         </div >

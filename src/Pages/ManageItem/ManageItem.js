@@ -7,6 +7,7 @@ const ManageItem = ({ item }) => {
   const { _id, name, price, quantity } = item;
   const [items,setItems]=useItems()
   console.log(items)
+  
   const handleDelete=(id)=>{
     const proceed=window.confirm('Are You Sure?')
     if(proceed){
