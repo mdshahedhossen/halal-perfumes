@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import useMyitems from '../hooks/useMyitems';
 import MyItem from '../MyItem/MyItem'
 
 const MyItems = () => {
-    const[myItems,setMyItems]=useState([])
-    useEffect(()=>{
-        const url= `http://localhost:5000/myItems`
-        fetch(url)
-        .then(res=>res.json())
-        .then(data=>setMyItems(data)) 
-    },[])
+    const[myItems,setMyItems]=useMyitems()
     
     return (
         <div className='item'>
