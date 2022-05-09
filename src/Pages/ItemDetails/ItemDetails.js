@@ -8,7 +8,7 @@ const ItemDetails = () => {
   const [itemDetails, setItemDetails] = useState({});
   const { _id, img, name, price, quantity, description, supplier } = itemDetails;
   useEffect(() => {
-    const url = `http://localhost:5000/items/${itemId}`;
+    const url = `https://warm-wildwood-52542.herokuapp.com/items/${itemId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setItemDetails(data));
@@ -19,7 +19,7 @@ const ItemDetails = () => {
         const quantity = parseInt(e.target.quantity.value) + parseInt(itemDetails.quantity)
         const updatePerfumes = { quantity }
 
-        const url=`http://localhost:5000/items/${itemId}`
+        const url=`https://warm-wildwood-52542.herokuapp.com/items/${itemId}`
         fetch(url, {
           method: 'PUT',
           headers: {
@@ -38,7 +38,7 @@ const ItemDetails = () => {
   const handleDeliver = id => {
     const quantityUpdate = itemDetails?.quantity
     const updateQuantity = { quantityUpdate }
-    fetch(`http://localhost:5000/items/deliver/${id}`, {
+    fetch(`https://warm-wildwood-52542.herokuapp.com/items/deliver/${id}`, {
         method: 'PUT',
         headers: {
             'content-type': 'application/json'

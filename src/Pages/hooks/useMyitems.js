@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 const useMyitems = () => {
     const[myItems,setMyItems]=useState([])
     useEffect(()=>{
-        const url= `http://localhost:5000/myItems`
+        const url= `https://warm-wildwood-52542.herokuapp.com/myItems`
         fetch(url)
         .then(res=>res.json())
         .then(data=>setMyItems(data)) 

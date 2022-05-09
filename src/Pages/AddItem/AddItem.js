@@ -25,7 +25,7 @@ const AddItem = () => {
 
         const myItems = { img, name, price, quantity, supplier, description, email }
 
-        fetch('http://localhost:5000/items', {
+        fetch('https://warm-wildwood-52542.herokuapp.com/items', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -39,7 +39,7 @@ const AddItem = () => {
                 e.target.reset();
             })
 
-            fetch('http://localhost:5000/myItems', {
+            fetch('https://warm-wildwood-52542.herokuapp.com/myItems', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
