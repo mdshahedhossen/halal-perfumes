@@ -1,0 +1,43 @@
+.reviews{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px;
+    padding: 30px;
+    /* background-color: goldenrod; */
+}
+.review-section{
+    margin-top: 35px;
+}
+.text{
+    text-align: center;
+    text-decoration: underline;
+}
+.review-card{
+    margin: 20px;
+    padding: 15px;
+    border-radius: 2%;
+}
+.review-card img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.color-1{
+    background-color: #f1fcf1;
+}
+.color-2{
+    background-color: #e3ffff;
+}
+.color-3{
+    background-color: #faebd7;
+}
+@media screen and (max-width: 960px) {
+    .reviews{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 576px) {
+    .reviews{
+        grid-template-columns: 1fr;
+    }
+}

@@ -23,13 +23,14 @@ const AddItem = () => {
             .then(result=>{
                 console.log(result)
             })
+        
 
     } 
     return (
         <div className='w-50 mx-auto'>
             <h1 className='add-title'>Add Your New Item</h1>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-                <input className='mb-2 p-2' label="email" register={user.email} readOnly />
+                <input className='mb-2 p-2' label="email" value={user.email} readOnly />
                 <input className='mb-2 p-2' placeholder='Item name' {...register("name", { required: true, maxLength: 20 })} />
                 <textarea className='mb-2 p-2' placeholder='Description' {...register("description")} />
                 <input className='mb-2 p-2' placeholder='Supplier' {...register("supplier")} />

@@ -1,7 +1,6 @@
-import { sendPasswordResetEmail } from "firebase/auth";
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import auth from "../../../firebase.init";
@@ -15,6 +14,7 @@ const Login = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+      const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     const emailRef=useRef('')
     const passRef=useRef('')
@@ -65,15 +65,12 @@ const Login = () => {
           <Form.Control ref={passRef} type="password" placeholder="Password" required/>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
         <Button className="btn-login" type="submit">
           Login
         </Button>
       </Form>
       <p className="new-user">
-        Forget Password? <button onClick={resetPassword} className="text-primary p-auto">Reset password</button>
+        Forget Password? <button onClick={resetPassword} className="text-primary p-auto border-0">Reset password</button>
     </p>
       <SociaLogin></SociaLogin>
       <ToastContainer />

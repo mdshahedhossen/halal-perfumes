@@ -9,10 +9,9 @@ const MyItems = () => {
     
     const [user]=useAuthState(auth);
     const [myItems, setMyItems] = useState([])
-    console.log('hello')
     useEffect(()=>{
         const getItems = async () =>{
-            const email=user.email
+            const email=user.email   
             const url=`http://localhost:5000/myItems?email${email}`
             try {
                 const { data } = await axiosPrivate.get(url);

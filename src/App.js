@@ -12,6 +12,7 @@ import Blogs from "./Pages/Blogs/Blogs";
 import Footer from "./Shared/Footer/Footer";
 import Notmatch from "./Notmatch/Notmatch";
 import MyItems from "./Pages/MyItems/MyItems";
+import Reviews from "./Pages/Reviews/Reviews";
 
 function App() {
   return (
